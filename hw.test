@@ -1,0 +1,35 @@
+(   :=   x (  cos (+    -7 3)   	 ))
+(for   y 1 2 (translate (rotate (group (line 5 x y 9) (line 2 7 4 13)) -90) 11 y))
+(for a 1 2 (scale ( translate (rotate (group (line 0 x y 9) (line 2 0 4 x)) -90) (+ a y) 10) x))
+(for b 1 2 (   scale (   rotate (group (line (* 2  4 ) x y 1) (line 10 b 1 2)) -90) 13) (:= X 1) (linewidth X) (:= X 2) (line 0 0 X X))
+(rect 12 2 2301 1)
+(filledrect 12 2 21 1)
+(       for		 z 3 9)
+
+(translate
+(group 
+(ngon      1 2 (+ 3 6) 4)
+(filledngon    1 2 ( *   3 8) 9)
+(tri (/ 1 7) z 3)
+(group
+(filledtri  z  z z   )
+(penta  1 2 3  )
+(filledsquare  1 2 3)
+)
+(hexa  1 x 3)
+)
+  3124 433)
+
+(for t 1 9 (filledhexa  -1 x 3)
+		( group   		(sector 1 2 3
+		     -4.2 5.9)
+		   )
+  (filledsector 1 2 3 4.2 5.9)
+	)      
+(:= x (+ x 2))
+(:= X 1) (linewidth X) (:= X 2) (line 0 0 X X)
+(:= y (cos x))
+                  
+                      			                        
+(sector 1 2 3 4 5)
+
